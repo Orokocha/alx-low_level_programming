@@ -1,23 +1,21 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- * Description 'print alphabets expect q and e'
- * Return: Always zero
+ * main - Prints the alphabet in lowercase, except for q and e.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-        int n = 97;
+	char letter;
 
-        while (n <= 122)
-        {
-                if (n == 101 || n == 113)
-                {
-                        n++;
-                        continue;
-                }
-                putchar(n);
-                n++;
-        }
-        putchar('\n');
-        return (0);
+	for (letter = 'a'; letter <= 'z'; letter++)
+	{
+		if (letter != 'e' && letter != 'q')
+			putchar(letter);
+	}
+
+	putchar('\n');
+
+	return (0);
 }
