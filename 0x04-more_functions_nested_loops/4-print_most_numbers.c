@@ -1,24 +1,20 @@
 #include "main.h"
 
 /**
- * print_most_numbers -func checks for a dgt through o-9)0
- *
- * Return:Always 0.
+ * print_most_numbers - prints the numbers, from 0 to 9,
+ * except 2 and 4, followed by a new line
  */
 void print_most_numbers(void)
 {
-  	int x = 0;
+	int i;
 
-	for (: x <= 9; x++)
+	for (i = 0; i < 10; i++)
 	{
-	if (x ==2 || x ==4)
-	{
-	continue;
+		if (i != 2 && i != 4)
+		{
+			_putchar(i + '0');
+		}
 	}
-	else
-	{
-	_putchar(x + '0');
-	}
-	}
+
 	_putchar('\n');
 }
